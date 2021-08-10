@@ -74,7 +74,7 @@ const WhatNew = (props) => {
         //     '(\\?[;&a-z\\d%_.~+=-]*)?' +
         //     '(\\#[-a-z\\d_]*)?$', 'i');
         // return !!pattern.test(url);
-        return (url.match(/\.(jpeg|jpg|gif|png)$/) != null);
+        return (url.match(/^http[^\?]*.(jpg|jpeg|gif|png|tiff|bmp)(\?(.*))?$/gmi) != null);
     }
 
     return (
